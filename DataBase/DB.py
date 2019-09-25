@@ -5,7 +5,7 @@ logger = logUtil.getLogger(0)
 
 class operateDB:
     def __init__(self):
-        self.__dbName = 'qunarNew'
+        self.__dbName = 'qunar'
         self.__user = 'root'
         self.__password = '123456'
         self.__host = 'localhost'
