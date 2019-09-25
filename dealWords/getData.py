@@ -14,8 +14,8 @@ def getDataBaseData(city_number):
         for row in com:
             text += row[0].decode('gbk') + '\n'
         if text != '':
-            cn, numPic, newWords = True, scenery_number, [scenery_name]
-            cw = makeWorldCloud.makeCW(cn, numPic, newWords, text)
+            cn, numPic, newWords, pic_path = True, scenery_number, [scenery_name],"./resource/backPicture.jpg"
+            cw = makeWorldCloud.makeCW(cn, numPic, newWords, text,pic_path)
             cw.main()
             del cw
             print(scenery_name + " : " + scenery_number + "词云制作成功")
@@ -26,9 +26,9 @@ def getDataBaseData(city_number):
 # 获取文本数据并分析
 def getTextData(path):
     text = readFile.readFile(path)
-    cn, numPic, newWords = True, 111, ['****']
+    cn, numPic, newWords,pic_path = True, 111, ['****'],"./resource/backPicture.jpg"
     if text != '':
-        cw = makeWorldCloud.makeCW(cn, numPic, newWords, text)
+        cw = makeWorldCloud.makeCW(cn, numPic, newWords, text,pic_path)
         cw.main()
         print(path + "词云制作成功")
     else:

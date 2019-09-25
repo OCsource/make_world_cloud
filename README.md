@@ -45,6 +45,8 @@ make_word_cloud ---- DataBase ---- DB.py
                   ---- resource ---- simsun.ttf
                   
                                 ---- stop_words.txt
+                                
+                                ---- backPicture.jpg
                    
                   ---- logs ---- DB_log.log
                             
@@ -67,3 +69,5 @@ jieba： 用于分词
 wordcloud：用于制作词云
 
 matplotlib：绘图使用
+
+pymysql：用于连接数据库
